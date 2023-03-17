@@ -1,0 +1,20 @@
+challenge1b: I used 1000 bins for theta ranging from 0 to pi
+and 1000 bins for rho from -diagonal to +diagonal. 
+1000 is the balance choice between accuracy and running time.
+I did not translate the coordinate of the image. 
+It is still from (1,1) to (H, W). In my implementation it will be easier to compute. 
+
+
+challenge1c: I used a standard threshold to find peaks. 
+After several trial and errors, I found threshold around 80 works pretty well.
+
+
+challenge1d: what I did is check every line above the threshold. 
+For each line, I checked every point on the line to verify whether it is on a real edge. 
+If so, indicate it with 1, otherwise 0. After that, we have an 1xW indicator array for each line. 
+Then, find consecutive 1s in that array. 
+If we find consecutive 0s after consecutive 1s, it should be the end point of a line segment. 
+Ignore the 0s if they are not long enough (avoiding problems caused by accuracy errors).
+On the other hand, if we find consecutive 1s after consecutive 0s, 
+it should be the start point of a line segment.
+Draw the line segments based on start points and end points we found.

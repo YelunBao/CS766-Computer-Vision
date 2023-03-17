@@ -1,0 +1,1 @@
+In this homework, the only parameter I had to decide is the threshold in Walkthrough 3. After checking the grayscale map and testing with several values, threshold value 0.4 was used.
